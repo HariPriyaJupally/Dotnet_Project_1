@@ -27,9 +27,18 @@ namespace SortComparison
             InitializeComponent();
         }
 
+        public String InitializeOutputFolder()
+        {
+            return AppDomain.CurrentDomain.BaseDirectory.ToString() + "\\output";
+        }
+         
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            this.tbSamples.Value = 60;
+            this.cboAlg1.SelectedIndex = 3;
+            this.cboAlg2.SelectedIndex = 12;
+            this.cmdShuffle.PerformClick();
         }
 
         public void Randomize(IList list)
@@ -253,6 +262,10 @@ namespace SortComparison
                 this.txtOutputFolder.Text = folderBrowserDialog1.SelectedPath;
             }
         }
-      
+
+        private void tbSamples_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }

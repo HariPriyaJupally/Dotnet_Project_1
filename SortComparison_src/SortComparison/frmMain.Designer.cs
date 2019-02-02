@@ -53,6 +53,10 @@
             // 
             // cboAlg1
             // 
+            this.cboAlg1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboAlg1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cboAlg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboAlg1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.cboAlg1.FormattingEnabled = true;
             this.cboAlg1.Items.AddRange(new object[] {
             "",
@@ -78,6 +82,7 @@
             // 
             // cboAlg2
             // 
+            this.cboAlg2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.cboAlg2.FormattingEnabled = true;
             this.cboAlg2.Items.AddRange(new object[] {
             "",
@@ -103,27 +108,30 @@
             // 
             // cmdShuffle
             // 
+            this.cmdShuffle.BackColor = System.Drawing.SystemColors.Highlight;
             this.cmdShuffle.Location = new System.Drawing.Point(263, 257);
             this.cmdShuffle.Name = "cmdShuffle";
             this.cmdShuffle.Size = new System.Drawing.Size(75, 23);
             this.cmdShuffle.TabIndex = 4;
             this.cmdShuffle.Text = "Shuffle";
-            this.cmdShuffle.UseVisualStyleBackColor = true;
+            this.cmdShuffle.UseVisualStyleBackColor = false;
             this.cmdShuffle.Click += new System.EventHandler(this.cmdShuffle_Click);
             // 
             // cmdSort
             // 
+            this.cmdSort.BackColor = System.Drawing.Color.Aquamarine;
+            this.cmdSort.ForeColor = System.Drawing.Color.Red;
             this.cmdSort.Location = new System.Drawing.Point(344, 257);
             this.cmdSort.Name = "cmdSort";
             this.cmdSort.Size = new System.Drawing.Size(75, 23);
             this.cmdSort.TabIndex = 5;
             this.cmdSort.Text = "Sort";
-            this.cmdSort.UseVisualStyleBackColor = true;
+            this.cmdSort.UseVisualStyleBackColor = false;
             this.cmdSort.Click += new System.EventHandler(this.cmdSort_Click);
             // 
             // pnlSort1
             // 
-            this.pnlSort1.BackColor = System.Drawing.Color.White;
+            this.pnlSort1.BackColor = System.Drawing.Color.Transparent;
             this.pnlSort1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSort1.Location = new System.Drawing.Point(13, 12);
             this.pnlSort1.Name = "pnlSort1";
@@ -133,7 +141,7 @@
             // 
             // pnlSort2
             // 
-            this.pnlSort2.BackColor = System.Drawing.Color.White;
+            this.pnlSort2.BackColor = System.Drawing.Color.Transparent;
             this.pnlSort2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSort2.Location = new System.Drawing.Point(219, 12);
             this.pnlSort2.Name = "pnlSort2";
@@ -152,6 +160,7 @@
             this.tbSamples.TabIndex = 8;
             this.tbSamples.TickFrequency = 10;
             this.tbSamples.Value = 20;
+            this.tbSamples.Scroll += new System.EventHandler(this.tbSamples_Scroll);
             // 
             // lblSamples
             // 
@@ -212,12 +221,13 @@
             // 
             // btnSelectFolder
             // 
+            this.btnSelectFolder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSelectFolder.Location = new System.Drawing.Point(344, 319);
             this.btnSelectFolder.Name = "btnSelectFolder";
             this.btnSelectFolder.Size = new System.Drawing.Size(31, 23);
             this.btnSelectFolder.TabIndex = 17;
             this.btnSelectFolder.Text = "...";
-            this.btnSelectFolder.UseVisualStyleBackColor = true;
+            this.btnSelectFolder.UseVisualStyleBackColor = false;
             this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click);
             // 
             // txtOutputFolder
@@ -226,7 +236,7 @@
             this.txtOutputFolder.Name = "txtOutputFolder";
             this.txtOutputFolder.Size = new System.Drawing.Size(215, 20);
             this.txtOutputFolder.TabIndex = 16;
-            this.txtOutputFolder.Text = "E:\\Sort";
+            this.txtOutputFolder.Text = InitializeOutputFolder();
             // 
             // label4
             // 
@@ -241,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 359);
+            this.ClientSize = new System.Drawing.Size(430, 359);
             this.Controls.Add(this.btnSelectFolder);
             this.Controls.Add(this.txtOutputFolder);
             this.Controls.Add(this.label4);
